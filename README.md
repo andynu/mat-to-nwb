@@ -34,13 +34,7 @@ addpath(genpath('/path/to/matnwb'));
 
 ### Conversion Scripts
 - `convertMatToNwb.m`: Main conversion function that converts MATLAB data to NWB format
-- `run_conversions.m`: Example script showing how to convert single or multiple files
-- `analyze_matlab_file.m`: Utility to analyze and display MATLAB file structure
-- `convert_matlab_to_nwb.py`: Python script for direct MATLAB v7.3 to NWB conversion
 
-### Analysis Scripts
-- `explore_nwb.py`: Python script to explore and visualize NWB file contents
-- `visualize_nwb.py`: Python script for specific visualization of NWB data
 
 ## Data Structures
 
@@ -88,6 +82,8 @@ matlab -batch "convertMatToNwb('./MATLABFiles/Jack_42_sham.mat')"
 # Convert a single file with custom description and experimenter
 matlab -batch "convertMatToNwb('./MATLABFiles/Jack_42_sham.mat', 'Session 42', 'Your name')"
 ```
+
+see `convert.sh` for a wrapper around this.
 
 ## Dependencies
 - MATLAB
