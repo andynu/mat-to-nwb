@@ -4,7 +4,7 @@
 
 ## Clone this repository
 ```bash
-git clone 
+git clone https://github.com/andynu/mat-to-nwb.git
 ```
 
 ### MATLAB Dependencies
