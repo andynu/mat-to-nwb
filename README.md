@@ -4,10 +4,10 @@
 
 ```bash
 # Install using curl
-curl -sSL https://raw.githubusercontent.com/andynu/mat-to-nwb/main/install.sh | bash
+curl -sSL https://raw.githubusercontent.com/andynu/mat-to-nwb/refs/heads/main/install.sh | bash
 
 # Or download and run install script manually
-curl -O https://raw.githubusercontent.com/andynu/mat-to-nwb/main/install.sh
+curl -O https://raw.githubusercontent.com/andynu/mat-to-nwb/refs/heads/main/install.sh
 bash install.sh
 ```
 

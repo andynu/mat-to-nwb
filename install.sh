@@ -35,8 +35,6 @@ echo "
 ✅ Setup complete!
 
 Example usage:
-1. Place your MATLAB files in the MATLABFiles directory
-2. Run the conversion script:
    ./convert.sh /path/to/your_matlab_file.mat
 
 For more examples and options, please refer to the README.md file.
