@@ -6,11 +6,13 @@ set -x  # Print commands and their arguments as they are executed
 # Check if a filename was provided
 if [ $# -eq 0 ]; then
   echo "Error: No filename provided"
-  echo "Usage: $0 <filename.mat>"
+  echo "Usage: $0 <filename.mat> [session_description] [experimenter]"
   exit 1
 fi
 
 file="$1"
+session_desc="${2:-}"  # Optional session description
+experimenter="${3:-}"  # Optional experimenter name
 
 # Check if the file exists
 if [ ! -f "$file" ]; then
@@ -50,5 +52,15 @@ if [ -f "$nwb_file" ]; then
   fi
 fi
 
+# Build the MATLAB command with optional parameters
+matlab_cmd="addpath(genpath('$(dirname "$0")/matnwb')); convertMatToNwb('$file'"
+if [ ! -z "$session_desc" ]; then
+  matlab_cmd="$matlab_cmd, '$session_desc'"
+  if [ ! -z "$experimenter" ]; then
+    matlab_cmd="$matlab_cmd, '$experimenter'"
+  fi
+fi
+matlab_cmd="$matlab_cmd)"
+
 # Run the MATLAB conversion script
-matlab -batch "addpath(genpath('$(dirname "$0")/matnwb')); convertMatToNwb('$file')"
+matlab -batch "$matlab_cmd"
