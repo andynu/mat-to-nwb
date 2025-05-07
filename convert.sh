@@ -51,4 +51,4 @@ if [ -f "$nwb_file" ]; then
 fi
 
 # Run the MATLAB conversion script
-matlab -batch "convertMatToNwb('$file')"
+matlab -batch "addpath(genpath('$(dirname "$0")/matnwb')); convertMatToNwb('$file')"
