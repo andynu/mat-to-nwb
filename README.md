@@ -1,6 +1,17 @@
 # MATLAB to NWB Conversion Project
 
-## Setup
+## Quick Setup
+
+```bash
+# Install using curl
+curl -sSL https://raw.githubusercontent.com/andynu/mat-to-nwb/main/install.sh | bash
+
+# Or download and run install script manually
+curl -O https://raw.githubusercontent.com/andynu/mat-to-nwb/main/install.sh
+bash install.sh
+```
+
+## Manual Setup
 
 ## Clone this repository
 ```bash
