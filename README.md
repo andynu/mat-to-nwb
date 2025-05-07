@@ -81,3 +81,7 @@ matlab -batch "convertMatToNwb('./MATLABFiles/Jack_42_sham.mat', 'Session 42', '
 ## Dependencies
 - MATLAB
 - MatNWB
+
+## Other relevant tools
+- nwbinspector - https://github.com/NeurodataWithoutBorders/nwbinspector
+- VisiData - https://www.visidata.org/
